@@ -1,0 +1,12 @@
+{
+  "project_name": "appointment",
+  "frontend_path": "frontend",
+  "backend_path": "backend",
+  "cursor_config_path": "Agent",
+  "ai_mode": "development",
+  "rule_paths": [
+    "Agent/rules/base_rules.json",
+    "Agent/rules/python_rules.json",
+    "Agent/rules/cursor_doc_rules.json"
+  ]
+}

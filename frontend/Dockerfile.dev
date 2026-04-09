@@ -1,0 +1,16 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# 安装依赖
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
+
+# 复制源代码 (虽然 compose 会挂载，但保留 COPY 以便独立运行)
+COPY . .
+
+# 暴露 Vite 默认端口
+EXPOSE 5173
+
+# 启动开发服务器
+CMD ["npm", "run", "dev"]
